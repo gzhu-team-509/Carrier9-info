@@ -6,6 +6,8 @@ Team509的Wifi接入点是参考[GZHU-Wikiii](https://github.com/GZHU-Dress/GZHU
 
 使用的路由器型号为Lenovo-Y1(Newifi mini)，路由器已刷入潘多拉系统。
 
+路由器可用于中继校园网网络，（实验性功能）访问[Google学术搜索](https://scholar.google.com/)。
+
 ## 基本工作原理
 
 任何人完成入网身份认证后，路由器会中继网络，任何接入路由器的使用者都可以连接上互联网，无需额外认证。
