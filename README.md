@@ -27,10 +27,14 @@ Team509的Wifi接入点是参考[GZHU-Wikiii](https://github.com/GZHU-Dress/GZHU
 
 # 打开SSH客户端，以root身份登陆路由器（192.168.1.1），并执行：
 
-screen /usr/bin/agentx1 -L br-lan -W eth0.2 -p LOCAL -a AFTER
+screen agentx1 -L br-lan -W eth0.2 -p LOCAL -a AFTER
 
 # 关闭SSH客户端。
 # 使用锐捷客户端完成入网身份认证，然后使用任务管理器终止“锐捷认证客户端”。
 # 路由器会持续中继网络。
 
 ```
+
+## 重要提示
+
+长按路由器背面的Reset按钮将导致路由器清除所有数据并重启，慎之慎之。
