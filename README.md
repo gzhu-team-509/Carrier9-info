@@ -1,42 +1,29 @@
-# Welcome to Team509 Access Point
+# TEAM509 Router's Homepage
 
-## 信息
+每天6:30重启。
 
-Team509的Wifi接入点是参考[GZHU-Wikiii](https://github.com/GZHU-Dress/GZHU-Wikiii)搭建的。
+## [硬件](https://openwrt.org/toh/lenovo/lenovo_y1_v1)
 
-使用的路由器型号为Lenovo-Y1(Newifi mini)，路由器已刷入潘多拉系统。
+| Model | Version | SoC | CPU MHz | Flash MB | RAM MB | WLAN Hardware | WLAN2.4 | WLAN5.0 | 100M ports | Gbit ports | Modem | USB |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Y1 | v1 | MediaTek MT7620A | 580 | 16 | 128 | MediaTek MT7612E | b/g/n | a/n/ac | 2 | - | No | 1x 2.0 |
 
-路由器可用于中继校园网网络，（实验性功能）访问[Google学术搜索](https://scholar.google.com/)。
+*处理器架构* `ramips` `mipsel`
 
-## 基本工作原理
+## 软件
 
-任何人完成入网身份认证后，路由器会中继网络，任何接入路由器的使用者都可以连接上互联网，无需额外认证。
+1. openssh-sftp-server
+2. unbound
 
-认证长期有效。在下列特殊情况中，可能需要重新连接：
+## 服务
 
-- 路由器掉电重启
-- 认证服务服务器每48小时断开连接
+1. [Googlehosts](https://github.com/googlehosts/)提供的Host文件
+2. [1.1.1.1](https://1.1.1.1/)和[红鱼DNS](https://www.rubyfish.cn/)提供的DoT。
 
-## 连接方法
+## 历史
 
-48小时，使用锐捷客户端完成认证，然后使用任务管理器终止“锐捷认证客户端”即可
+1. 最初，寝室的路由器是参考[GZHU-Dress/GZHU-Wikiii](https://github.com/GZHU-Dress/GZHU-Wikiii)以及[GZHU-Dress/openwrt-minieap](https://github.com/GZHU-Dress/openwrt-minieap)配置的，并曾经使用过一段时间的[CrazyBoyFeng/agentx1](https://bitbucket.org/CrazyBoyFeng/agentx1)，后来GZHU-Wikiii上的页面因为过时而或移除或存档了。
 
-如果路由器因故掉电重启，则需要使用网线连接电脑和路由器的任意LAN口，执行下面的操作：
+2. 此后，参考[ysc3839/openwrt-minieap](https://github.com/ysc3839/openwrt-minieap)更新了路由器上的软件。
 
-```bash
-
-# 打开SSH客户端，以root身份登陆路由器（192.168.1.1），并执行：
-
-screen agentx1 -L br-lan -W eth0.2 -p LOCAL -a AFTER
-
-# 关闭SSH客户端。
-# 使用锐捷客户端完成入网身份认证，然后使用任务管理器终止“锐捷认证客户端”。
-# 路由器会持续中继网络。
-
-```
-
-## 重要提示
-
-长按路由器背面的Reset按钮将导致路由器清除所有数据并重启，慎之慎之。
-
-使用Windows版的锐捷客户端验证成功后，请用任务管理器结束锐捷认证客户端进程。请不要使用客户的端退出功能，避免客户端发出下线信号。
+3. Minieap脚本的编写参考了[updateing/router-scripts/](https://github.com/updateing/router-scripts)。
