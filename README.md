@@ -15,6 +15,7 @@
 1. openssh-sftp-server
 2. unbound
 3. wget, libustream-openssl, ca-certificates
+4. unzip
 
 ## 服务
 
