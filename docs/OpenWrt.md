@@ -4,13 +4,21 @@
 
 在路由器上刷入OpenWrt的固件即可。在刷入OpenWrt的固件之前，一般需要确认路由器的u-boot或Breed信息。
 
-安装完成后可以通过SSH或HTTP来访问路由器。
+安装完成后可以通过SSH来访问Shell或HTTP来访问Luci。
 
 ## 更新系统
 
 系统更新时，对文件系统做出的修改如无声明均会被重置。
 
 要保留的修改需要在Luci设置界面`/cgi-bin/luci/admin/system/flashops/backupfiles`中指出。
+
+## 为Luci管理界面安装SSL
+
+```sh
+opkg install luci-ssl
+```
+
+在httpd下一次启动时（`/etc/init.d/uhttpd restart`）会自动生成SSL证书，该过程可能耗时1分钟左右。
 
 ## 包管理器opkg
 
@@ -28,33 +36,6 @@ opkg install curl
 opkg install wget libustream-openssl ca-certificates
 opkg install unzip
 opkg install openssh-sftp-server
-```
-
-## 挂载USB设备
-
-可以使用USB设备来拓展设备的存储空间。
-
-```sh
-# USB支持
-opkg install kmod-usb-core
-opkg install kmod-usb-uhci kmod-usb-storage kmod-usb2 kmod-usb-ohci
-
-opkg install mount-utils
-opkg install block-mount   # 挂载 Luci界面
-
-opkg install kmod-fs-ext4  # Ext4文件系统
-opkg install kmod-fs-vfat  # FAT文件系统
-```
-
-在Luci管理界面`/cgi-bin/luci/admin/system/packages/ipkg`中，修改opkg源设置如下：
-
-```sh
-dest root /
-dest ram /tmp
-dest usb /mnt/sda1/optware
-lists_dir ext /var/opkg-lists
-option overlay_root /overlay
-option check_signature
 ```
 
 ## IPv6 NAT
@@ -85,14 +66,6 @@ ip6tables -t nat -A POSTROUTING -o $WAN6 -j MASQUERADE
 ip6tables -A FORWARD -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
 ip6tables -A FORWARD -i $LAN -j ACCEPT
 ```
-
-## 为Luci管理界面安装SSL
-
-```sh
-opkg install luci-ssl
-```
-
-在httpd下一次启动时会自动生成SSL证书，该过程可能耗时1分钟左右。
 
 ---
 
