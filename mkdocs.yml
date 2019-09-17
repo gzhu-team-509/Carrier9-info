@@ -4,7 +4,7 @@ theme:
   language: 'zh'
   logo: 
     icon: 'router'
-  favicon: 'assets/icon.png'
+  favicon: 'icon.png'
   palette:
     primary: 'teal'
     accent: 'amber'

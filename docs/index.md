@@ -1,26 +1,23 @@
-# TEAM509 Router's Homepage
+# 主页
 
-每天6:30重启。
+本站点为路由器文档站点。
 
-## [硬件](https://openwrt.org/toh/lenovo/lenovo_y1_v1)
+---
+
+## 硬件
 
 | Model | Version | SoC | CPU MHz | Flash MB | RAM MB | WLAN Hardware | WLAN2.4 | WLAN5.0 | 100M ports | Gbit ports | Modem | USB |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Y1 | v1 | MediaTek MT7620A | 580 | 16 | 128 | MediaTek MT7612E | b/g/n | a/n/ac | 2 | - | No | 1x 2.0 |
 
-*处理器架构* `ramips` `mipsel`
+- 处理器核心数量 1
+- 处理器架构 `ramips` `mipsel`
+
+[硬件详细信息链接](https://openwrt.org/toh/lenovo/lenovo_y1_v1)
 
 ## 软件
 
-1. openssh-sftp-server
-2. unbound
-3. wget, libustream-openssl, ca-certificates
-4. unzip
-
-## 服务
-
-1. [Googlehosts](https://github.com/googlehosts/)提供的Host文件
-2. [1.1.1.1](https://1.1.1.1/)和[红鱼DNS](https://www.rubyfish.cn/)提供的DoT。
+路由器运行OpenWRT系统，并在每天凌晨4:30自动重启。
 
 ## 历史
 

@@ -1,4 +1,4 @@
-# Welcome to TEAM509 Dorm AP: Carrier9
+# Welcome to TEAM509 Dormitory AP: Carrier9
 
 [![Build Status](https://travis-ci.com/gzhu-team-509/dorm-access-point.svg?branch=master)](https://travis-ci.com/gzhu-team-509/dorm-access-point)
 
