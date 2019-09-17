@@ -7,7 +7,7 @@ opkg install ip6tables kmod-ipt-nat6 kmod-ip6tables kmod-ip6tables-extra luci-pr
 ```
 
 首先要设置IPv6 Global ULA Prefix。
-可以使用[ULA Generator](https://cd34.com/rfc4193/)获取一个以“fd”开头的地址，并将开头的“fd”改为“dd”，即修改为RFC协议中规定的Reserved地址段。
+可以使用[ULA Generator](https://cd34.com/rfc4193/)获取一个以`fd`开头的地址，并将开头的`fd`改为`dd`，即修改为RFC协议中规定的Reserved地址段。
 
 定义`/etc/hotplug.d/iface/90-ipv6`，以便在IPv6端口上线时自动设置路由表：
 
