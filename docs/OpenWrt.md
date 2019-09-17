@@ -35,10 +35,17 @@ opkg install openssh-sftp-server
 可以使用USB设备来拓展设备的存储空间。
 
 ```sh
-opkg install block-mount
+# USB支持
+opkg install kmod-usb-core
+opkg install kmod-usb-uhci kmod-usb-storage kmod-usb2 kmod-usb-ohci
+
+opkg install block-mount   # 挂载
+
+opkg install kmod-fs-ext4  # Ext4文件系统
+opkg install kmod-fs-vfat  # FAT文件系统
 ```
 
-在Luci管理界面`/cgi-bin/luci/admin/system/packages/ipkg`中，修改Opkg源设置如下：
+在Luci管理界面`/cgi-bin/luci/admin/system/packages/ipkg`中，修改opkg源设置如下：
 
 ```sh
 dest root /
