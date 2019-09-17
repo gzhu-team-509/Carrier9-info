@@ -39,7 +39,8 @@ opkg install openssh-sftp-server
 opkg install kmod-usb-core
 opkg install kmod-usb-uhci kmod-usb-storage kmod-usb2 kmod-usb-ohci
 
-opkg install block-mount   # 挂载
+opkg install mount-utils
+opkg install block-mount   # 挂载 Luci界面
 
 opkg install kmod-fs-ext4  # Ext4文件系统
 opkg install kmod-fs-vfat  # FAT文件系统
