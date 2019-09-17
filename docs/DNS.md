@@ -21,7 +21,7 @@ unbound-control-setup  # 通常需要重启后unbound-control才能生效。
 
 GoogleHosts项目主页：<https://github.com/googlehosts/>
 
-使用自定义Host时，需要在Luci中`/cgi-bin/luci/admin/network/dhcp`指明Addtional host file。
+使用自定义Host时，需要在Luci`/cgi-bin/luci/admin/network/dhcp`中指明Addtional host file。
 
 Host下载脚本：
 
