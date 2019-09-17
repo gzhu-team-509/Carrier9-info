@@ -13,7 +13,7 @@ unbound-control-setup  # 通常需要重启后unbound-control才能生效。
 
 ### 配置Unbound
 
-使用Luci界面``进行配置。
+使用Luci界面`/cgi-bin/luci/admin/services/unbound/configure`进行配置，使用Manual Conf和Extended Tabs。
 
 ## GoogleHosts
 
