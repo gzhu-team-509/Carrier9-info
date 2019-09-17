@@ -2,9 +2,9 @@ site_name: 'Carrier9'
 theme: 
   name: 'material'
   language: 'zh'
-  logo:
-    icon:
-      'router'
+  logo: 
+    icon: 'router'
+  favicon: 'assets/icon.png'
   palette:
     primary: 'teal'
     accent: 'amber'
