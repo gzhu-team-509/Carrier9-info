@@ -1,2 +1,22 @@
-site_name: Carrier9
-theme: readthedocs
+site_name: 'Carrier9'
+theme: 
+  name: 'material'
+  language: 'zh'
+  logo:
+    icon:
+      'router'
+  palette:
+    primary: 'teal'
+    accent: 'amber'
+repo_url: 'https://github.com/gzhu-team-509/dorm-access-point'
+repo_name: 'gzhu-team-509/dorm-access-point'
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+plugins:
+  - search
+  - minify:
+      minify_html: true
