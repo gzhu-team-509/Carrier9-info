@@ -1,15 +1,15 @@
-site_name: 'Carrier9'
+site_name: Carrier9
 theme: 
-  name: 'material'
-  language: 'zh'
+  name: material
+  language: zh
   logo: 
-    icon: 'router'
-  favicon: 'icon.png'
+    icon: router
+  favicon: icon.png
   palette:
-    primary: 'teal'
-    accent: 'amber'
-repo_url: 'https://github.com/gzhu-team-509/dorm-access-point'
-repo_name: 'gzhu-team-509/dorm-access-point'
+    primary: teal
+    accent: amber
+repo_url: https://github.com/gzhu-team-509/dorm-access-point
+repo_name: gzhu-team-509/dorm-access-point
 markdown_extensions:
   - admonition
   - codehilite:
