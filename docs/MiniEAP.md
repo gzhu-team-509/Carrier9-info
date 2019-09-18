@@ -56,7 +56,7 @@ detect_network_connectivity () {
     curl https://www.baidu.com --max-time 30 > /dev/null 2> /dev/null
     if [ $? != 0 ]; then
        echo "Network connectivity is poor."
-       retrun 1
+       return 1
     else
        echo "Network connectivity is good."
        return 0
