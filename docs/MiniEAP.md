@@ -64,7 +64,7 @@ detect_network_connectivity () {
 }
 
 
-kill_minipeap () {
+kill_minieap () {
     killall minieap
 }
 
