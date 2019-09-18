@@ -2,7 +2,7 @@
 
 ## 安装系统
 
-在路由器上刷入OpenWrt的固件即可。在刷入OpenWrt的固件之前，一般需要确认路由器的u-boot或Breed信息。
+在路由器上刷入OpenWrt的固件即可。在刷入OpenWrt的固件之前，一般需要确认路由器的u-boot或Breed信息，以免刷机过程中出错设备变砖时无法恢复。
 
 安装完成后可以通过SSH来访问Shell或HTTP来访问Luci。
 
@@ -40,7 +40,7 @@ opkg install openssh-sftp-server
 
 ---
 
-有以下的资源可以参考：
+关于OpenWrt，有以下的资源可以参考：
 
 - [OpenWrt官网](https://openwrt.org/)
 - [恩山无线论坛](https://www.right.com.cn/forum/)

@@ -8,6 +8,7 @@
 opkg install unbound
 opkg install unbound-control unbound-control-setup
 
+# 设置unbound-control
 unbound-control-setup  # 通常需要重启后unbound-control才能生效。
 ```
 
