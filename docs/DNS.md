@@ -16,6 +16,10 @@ unbound-control-setup  # 通常需要重启后unbound-control才能生效。
 
 使用Luci界面`/cgi-bin/luci/admin/services/unbound/configure`进行配置，使用Manual Conf和Extended Tabs。
 
+要完全交由Unbound解析，需要在Luci界面`/cgi-bin/luci/admin/network/dhcp`中设置ignore resolve file`/tmp/resolv.conf.auto`。
+
+现有[1.1.1.1](https://1.1.1.1/)和[红鱼DNS](https://www.rubyfish.cn/)提供的DoT。
+
 ## GoogleHosts
 
 !!! info "已停用，由Unbound替代。"
