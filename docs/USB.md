@@ -41,11 +41,11 @@ dest usb /mnt/usb/optware
 
 导入PATH的方法如下：
 
-`/mnt/usb/optware/env.sh`
+`/mnt/sda2/optware/env.sh`
 
 ```sh
 # Assume this partition is mounted as /mnt/usb/optware
-OPTWARE_PATH=/mnt/usb/optware
+OPTWARE_PATH=/mnt/sda2/optware
 
 export PATH=$PATH:$OPTWARE_PATH/usr/bin/
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$OPTWARE_PATH/usr/lib/
@@ -54,7 +54,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$OPTWARE_PATH/usr/lib/
 `/root/bin/env.sh`
 
 ```sh
-source /mnt/usb/optware/env.sh
+source /mnt/sda2/optware/env.sh
 ```
 
 `/etc/profile`
