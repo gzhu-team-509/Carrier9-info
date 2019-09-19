@@ -37,9 +37,22 @@ mount -t ext4 /dev/sda2 /mnt/share -o rw,sync
 dest usb /mnt/usb/optware
 ```
 
+## 设置Path
+
+```sh
+
+```
+
+## 在U盘上安装软件
+
+```sh
+opkg install --dest usb <package-name>
+```
+
 ---
 
 参考链接：
 
 - [Adding a USB Device](https://openwrt.org/docs/guide-user/storage/usb-drives-quickstart)
 - [USB Storage](https://openwrt.org/zh-cn/doc/howto/usb.storage)
+- [Opkg](https://openwrt.org/zh/docs/techref/opkg)
