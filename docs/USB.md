@@ -39,8 +39,28 @@ dest usb /mnt/usb/optware
 
 ## 设置Path
 
-```sh
+导入PATH的方法如下：
 
+`/mnt/usb/optware/env.sh`
+
+```sh
+# Assume this partition is mounted as /mnt/usb/optware
+OPTWARE_PATH=/mnt/usb/optware
+
+export PATH=$PATH:$OPTWARE_PATH/usr/bin/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$OPTWARE_PATH/usr/lib/
+```
+
+`/root/bin/env.sh`
+
+```sh
+source /mnt/usb/optware/env.sh
+```
+
+`/etc/profile`
+
+```sh
+source /root/bin/env.sh
 ```
 
 ## 在U盘上安装软件
