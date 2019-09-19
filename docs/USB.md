@@ -23,7 +23,10 @@ opkg install kmod-fs-vfat  # FAT文件系统
 以一块swap和Ext4分区为例：
 
 ```sh
-
+mkswap /dev/sda1
+swapon /dev/sda1
+mkdir -p /mnt/share
+mount -t ext4 /dev/sda2 /mnt/share -o rw,sync
 ```
 
 ## 在U盘上安装opkg包
