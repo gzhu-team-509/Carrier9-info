@@ -18,15 +18,20 @@ opkg install kmod-fs-ext4  # Ext4文件系统
 opkg install kmod-fs-vfat  # FAT文件系统
 ```
 
-在Luci管理界面`/cgi-bin/luci/admin/system/packages/ipkg`中，修改opkg源设置如下：
+## Swap和ext4分区
+
+以一块swap和Ext4分区为例：
 
 ```sh
-dest root /
-dest ram /tmp
-dest usb /mnt/sda1/optware
-lists_dir ext /var/opkg-lists
-option overlay_root /overlay
-option check_signature
+
+```
+
+## 在U盘上安装opkg包
+
+在Luci管理界面`/cgi-bin/luci/admin/system/packages/ipkg`中，修改opkg设置如下：
+
+```sh
+dest usb /mnt/usb/optware
 ```
 
 ---
