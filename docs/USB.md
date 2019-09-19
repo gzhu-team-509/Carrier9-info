@@ -20,13 +20,13 @@ opkg install kmod-fs-vfat  # FAT文件系统
 
 ## Swap和ext4分区
 
-以一块swap和Ext4分区为例：
+以一块ext4和swap分区为例：
 
 ```sh
-mkswap /dev/sda1
-swapon /dev/sda1
-mkdir -p /mnt/share
-mount -t ext4 /dev/sda2 /mnt/share -o rw,sync
+mkdir -p /mnt/sda1
+mount -t ext4 /dev/sda1 /mnt/share -o rw,sync
+mkswap /dev/sda2
+swapon /dev/sda2
 ```
 
 ## 在U盘上安装opkg包
@@ -34,27 +34,21 @@ mount -t ext4 /dev/sda2 /mnt/share -o rw,sync
 在Luci管理界面`/cgi-bin/luci/admin/system/packages/ipkg`中，修改opkg设置如下：
 
 ```sh
-dest usb /mnt/usb/optware
+dest sda1 /mnt/usb/optware
 ```
 
 ## 设置Path
 
 导入PATH的方法如下：
 
-`/mnt/sda2/optware/env.sh`
-
-```sh
-# Assume this partition is mounted as /mnt/usb/optware
-OPTWARE_PATH=/mnt/sda2/optware
-
-export PATH=$PATH:$OPTWARE_PATH/usr/bin/
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$OPTWARE_PATH/usr/lib/
-```
-
 `/root/bin/env.sh`
 
 ```sh
-source /mnt/sda2/optware/env.sh
+# Assume a ext4 partition is mounted at /mnt/sda1
+OPTWARE_PATH=/mnt/sda1/optware
+
+export PATH=$PATH:$OPTWARE_PATH/usr/bin/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$OPTWARE_PATH/usr/lib/
 ```
 
 `/etc/profile`
@@ -66,7 +60,7 @@ source /root/bin/env.sh
 ## 在U盘上安装软件
 
 ```sh
-opkg install --dest usb <package-name>
+opkg install --dest sda1 <package-name>
 ```
 
 ---
