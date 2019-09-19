@@ -28,3 +28,10 @@ lists_dir ext /var/opkg-lists
 option overlay_root /overlay
 option check_signature
 ```
+
+---
+
+参考链接：
+
+- [Adding a USB Device](https://openwrt.org/docs/guide-user/storage/usb-drives-quickstart)
+- [USB Storage](https://openwrt.org/zh-cn/doc/howto/usb.storage)
