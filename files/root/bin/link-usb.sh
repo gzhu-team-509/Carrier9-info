@@ -1,5 +1,5 @@
 #!/bin/sh
-# Remove broken links and link files in the USB storage mount point.
+# Remove broken links and link files that relate to the USB storage mount point.
 
 # The path to USB storage mount point.
 EXPATH="/mnt/sda1/"
