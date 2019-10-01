@@ -4,7 +4,7 @@ theme:
   language: zh
   logo: 
     icon: router
-  favicon: icon.png
+  favicon: assets/icon.png
   palette:
     primary: teal
     accent: amber
