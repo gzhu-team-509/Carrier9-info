@@ -1,10 +1,11 @@
 language: python
+cache: pip
 python: 3.7
 install:
-- pip install mkdocs
-- pip install mkdocs-material mkdocs-minify-plugin
+  - pip install mkdocs
+  - pip install mkdocs-material mkdocs-minify-plugin
 script:
-- mkdocs build
+  - mkdocs build
 deploy:
   provider: pages
   local_dir: site
