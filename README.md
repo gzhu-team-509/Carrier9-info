@@ -6,5 +6,5 @@
 
 ---
 
-- 文档站点：<https://gzhu-team-509.github.io/dorm-access-point/>
+- 文档站点：<https://gzhu-team-509.github.io/Carrier9-info/>
 - 统计站点：<https://509.qfstudio.net/>

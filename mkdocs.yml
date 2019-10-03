@@ -8,8 +8,8 @@ theme:
   palette:
     primary: teal
     accent: amber
-repo_url: https://github.com/gzhu-team-509/dorm-access-point
-repo_name: gzhu-team-509/dorm-access-point
+repo_url: https://github.com/gzhu-team-509/Carrier9-info
+repo_name: gzhu-team-509/Carrier9-info
 markdown_extensions:
   - admonition
   - codehilite:
