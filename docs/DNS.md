@@ -2,7 +2,7 @@
 
 ## Unbound
 
-!!! info "Unbound可作为校园网DNS的备份服务。"
+!!! info "Unbound现使用非加密的DNS，上游为1.1.1.1，完全替代校园网DNS。"
 
 ### 安装Unbound
 
@@ -20,7 +20,11 @@ unbound-control-setup  # 通常需要重启后unbound-control才能生效。
 
 若要完全交由Unbound解析，需要在Luci界面`/cgi-bin/luci/admin/network/dhcp`中设置ignore resolve file`/tmp/resolv.conf.auto`。
 
-然而由于硬件条件限制和tls-upstream等原因，unbound的解析速度可能会很慢，因此实践中不推荐完全由unbound解析，而是将unbound作为校园DNS的备用服务使用。
+#### 关于tls-upstream
+
+由于硬件条件限制和tls-upstream连接建立速度慢等原因，unbound的解析速度可能会很慢，因此实践中不推荐完全由unbound解析，而是将unbound作为校园DNS的备用服务使用。
+
+要完全交由unbound解析，应当使用非加密的DNS协议。
 
 现有[1.1.1.1](https://1.1.1.1/)和[红鱼DNS](https://www.rubyfish.cn/)提供的DoT。
 
